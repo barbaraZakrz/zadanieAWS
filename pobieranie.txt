@@ -1,0 +1,12 @@
+import nasdaqdatalink
+import quandl as quandl
+import numpy as np
+import pandas as pd
+
+quandl.ApiConfig.api_key = 'pqVtA9zTwRiYmkjXyMrY'
+mydata = quandl.get('ECONOMIST/BIGMAC_ROU', returns="numpy")
+
+print(mydata)
+
+df = pandas.DataFrame(mydata)
+df.to_csv('daneEconomist')
