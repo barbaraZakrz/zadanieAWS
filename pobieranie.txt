@@ -8,5 +8,9 @@ mydata = quandl.get('ECONOMIST/BIGMAC_ROU', returns="numpy")
 
 print(mydata)
 
-df = pandas.DataFrame(mydata)
+df = pd.DataFrame(mydata)
 df.to_csv('daneEconomist')
+
+mydata2 = quandl.get('ECONOMIST/BIGMAC_ROU', start_date='2021-01-31', end_date='2022-01-31')
+df2 = pd.DataFrame(mydata2)
+df2.to_csv('danelipiec')
